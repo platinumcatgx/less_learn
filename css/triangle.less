@@ -1,0 +1,27 @@
+// 调用同名混合, 用@_定义匹配符, 会自动寻找同名且带有相同匹配模式的混合
+.triangle(@_){
+    width: 0px;
+    height: 0px;
+    overflow: hidden;/* 解决IE6的兼容性问题 */
+}
+
+.triangle(L,@w,@c){
+    border-width: @w;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent @c;
+}
+.triangle(R,@w,@c){
+    border-width: @w;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent @c transparent transparent;
+}
+.triangle(T,@w,@c){
+    border-width: @w;
+    border-style: solid dashed dashed dashed;
+    border-color: @c transparent transparent transparent;
+}
+.triangle(B,@w,@c){
+    border-width: @w;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent @c transparent;
+}

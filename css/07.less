@@ -1,11 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-#wrap{
-    position: relative;
-    width: 300px;
-    height: 400px;
-    border: 1px solid;
-    margin: 0 auto;
+//引入外部文件(库)
+@import "./triangle.less";
+
+//相当于业务代码
+#wrap .sjx{
+    //使用第一个作为匹配符, 调用不同的代码
+    .triangle(L,@w:40px, @c:red)
 }
