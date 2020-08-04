@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    
+    // 基本嵌套, 父子关系
+    .inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: pink;
+        height: 100px;
+        width: 100px;
+        
+        // 嵌套规则 : 让当前选择器紧跟着上一个选择器
+        &:hover{
+            background-color:bisque;
+        }
+    }
+}

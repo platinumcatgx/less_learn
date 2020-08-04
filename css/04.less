@@ -1,0 +1,30 @@
+/* 属性值 */
+@color:pink;
+/* 属性名 */
+@m:margin;
+/* 选择器 */
+@s:#wrap;
+
+/*使用变量替换属性名和选择器, 需要添加{}*/
+*{
+    @{m}: 0;
+    padding: 0;
+}
+@{s}{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: @color;
+        height: 100px;
+        width: 100px;
+    }
+}
